@@ -1,12 +1,53 @@
-# React + Vite
+ 🖥️ Frontend - Cadastro de Alunos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o frontend da aplicação de cadastro de alunos e estatísticas, feito com React e Tailwind CSS.
 
-Currently, two official plugins are available:
+ 🛠️ Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React (com Vite)
+- Tailwind CSS
+- Axios (para requisições HTTP)
 
-## Expanding the ESLint configuration
+ ▶️ Como Executar
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Navegue até o diretório `frontend`.
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+4. certifique se de instalar o plugin do vite
+
+	npm install --save-dev @vitejs/plugin-react
+
+5. Acesse `http://localhost:5173` no navegador.
+
+🔧 Funcionalidades
+
+- Cadastrar alunos com nome, notas e frequência.
+- Visualizar lista de alunos cadastrados.
+- Exibir:
+  - Média de notas por aluno.
+  - Frequência do aluno.
+  - Média da turma por disciplina.
+  - Lista de alunos acima da média.
+  - Alunos com frequência abaixo de 75% (atenção especial).
+
+ 📌 Premissas
+
+- Interface assume que os dados de backend estão disponíveis na porta 8080.
+- A frequência é informada em percentual.
+- O sistema espera exatamente 5 notas por aluno.
+
+🧠 Decisões de Projeto
+
+- O layout foi feito com Tailwind por produtividade.
+- O componente `EstatisticasTurma` é responsável por apresentar os dados calculados.
+- As requisições são feitas por meio do serviço `api.js`.
+
+## ℹ️ Informações Adicionais
+
+A aplicação é responsiva e foi construída com foco em simplicidade e funcionalidade.
